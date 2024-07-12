@@ -1,5 +1,7 @@
 const {axiosInstance} = require('./index')
 
+//Register new User
+
 export const RegisterUser = async (value) => {
     try{
         const response = await axiosInstance.post("api/users/register", value);
@@ -10,6 +12,7 @@ export const RegisterUser = async (value) => {
 }
 
 
+// login user
 
 export const LoginUser = async (value) =>{
     try {
@@ -20,6 +23,7 @@ export const LoginUser = async (value) =>{
     }
 }
 
+// get current user from the frontend
 export const GetCurrentUser = async () =>{
     try {
         const response = await axiosInstance.get('api/users/get-current-user')
